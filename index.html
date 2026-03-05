@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Zen Particles: Calming Interactive Experience</title>
+    <link rel="stylesheet" href="/src/style.css">
+  </head>
+  <body>
+    <div id="game-container">
+      <canvas id="game-canvas"></canvas>
+      
+      <div id="ui-layer">
+        <div id="top-bar">
+          <div id="score-container" class="glass">
+            Score: <span id="score-value">0</span>
+          </div>
+          <div id="timer-container" class="glass">
+            Time: <span id="timer-value">90</span>s
+          </div>
+        </div>
+
+        <div id="controls-container">
+          <div id="mute-btn" class="icon-button glass" title="Toggle Sound">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+              <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+              <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Start Screen -->
+        <div id="start-overlay" class="overlay">
+          <div class="card glass animate-breath">
+            <h1>Zen Particles</h1>
+            <p>Take a breath and relax. Interact with the floating particles to find your inner peace.</p>
+            <button id="start-btn" class="primary-btn">Start Relaxing</button>
+          </div>
+        </div>
+
+        <!-- End Screen -->
+        <div id="end-overlay" class="overlay hidden">
+          <div class="card glass">
+            <h1>Peace Found</h1>
+            <p>Hope you feel calmer now.</p>
+            <div class="final-score">Final Score: <span id="final-score-value">0</span></div>
+            <button id="restart-btn" class="primary-btn">Relax Again</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/game.ts"></script>
+  </body>
+</html>
+
